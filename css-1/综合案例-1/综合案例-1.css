@@ -1,0 +1,27 @@
+.center {
+    text-align: center;
+}
+
+.head {
+    font-size: small;
+    color: grey;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.suojin {
+    text-indent: 2em;
+}
+
+.size {
+    font-size: 16px;
+}
+
+.tail {
+    font-size: small;
+    color: grey;
+    text-align: left;
+}
