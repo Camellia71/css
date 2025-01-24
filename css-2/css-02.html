@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        ol li {
+            color: red;
+        }
+
+        ol li a {
+            color: pink;
+        }
+
+        .nav li a {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ol>
+        变态写法
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul class="nav">
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li><a href="#">hhh</a></li>
+    </ul>
+    <ul>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li>2</li>
+        <li><a href="#">hhh</a></li>
+    </ul>
+</body>
+
+</html>
