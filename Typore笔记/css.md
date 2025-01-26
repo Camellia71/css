@@ -666,4 +666,117 @@ HTML元素一般分为块元素和行内元素两种类型。
 
 -转换为行内块：display: inline-block;
 
-#### 4.
+##### 3.6单行文字垂直居中
+
+解决方法：
+
+让文字的行高等于盒子的高度
+
+![image-20250125213616948](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250125213616948.png)
+
+#### 4.css背景
+
+##### 4.1背景颜色
+
+background-color属性定义了元素的背景颜色。
+
+```html
+<style>
+    div {
+        background-color :颜色/transparent；
+    }
+</style>
+```
+
+一般情况下元素背景颜色默认值是transparent（透明），我们也可以手动指定背景颜色为透明色。
+
+##### 4.2背景图片
+
+背景图片可以添加背景颜色，图片会压住颜色；
+
+```html
+<style>
+    div {
+        background-image :none/url(地址);
+    }
+</style>
+```
+
+none                        无背景图（默认）
+
+url                            使用绝对或相对路径指定背景图像
+
+##### 4.3背景平铺
+
+如果需要在HTML 页面上对背景图像进行平铺，可以使用background-repeat 属性。
+
+```html
+background-repeat: repeat | no-repeat | repeat-x | repeat-y
+```
+
+![image-20250125221505486](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250125221505486.png)
+
+##### 4.4背景方位
+
+利用background-position 属性可以改变图片在背景中的位置。
+
+```html
+background-position: x y;
+```
+
+参数代表的意思是：x 坐标和y 坐标。可以使用方位名词或者精确单位
+
+![image-20250125222549213](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250125222549213.png)
+
+![image-20250125230249780](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250125230249780.png)
+
+1.参数是方位名词
+
+如果指定的两个值都是方位名词，则两个值前后顺序无关，比如lefttop和topleft效果一致
+
+如果只指定了一个方位名词，另一个值省略，则第二个值默认居中对齐
+
+2.参数是精确单位
+
+如果参数值是精确坐标，那么第一个肯定是x 坐标，第二个一定是y坐标
+
+如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中
+
+3.参数是混合单位
+
+如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标
+
+##### 4.5背景固定
+
+background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。
+
+background-attachment 后期可以制作视差滚动的效果。
+
+```html
+background-attachment : scroll | fixed
+```
+
+![image-20250126084726981](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250126084726981.png)
+
+##### 4.6复合写法
+
+background: 背景颜色背景图片地址背景平铺背景图像滚动背景图片位置;
+
+```html
+background: transparent url(image.jpg) repeat-y fixed top ;
+```
+
+##### 3.7背景颜色半透明
+
+```html
+background: rgba(0, 0, 0, 0.3);
+```
+
+最后一个参数是alpha 透明度，取值范围在0~1之间
+
+我们习惯把0.3 的0 省略掉，写为background: rgba(0, 0, 0, .3);
+
+注意：背景半透明是指盒子背景半透明，盒子里面的内容不受影响
+
+#### 5.css三大特性
+
