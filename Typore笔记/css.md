@@ -818,3 +818,11 @@ body {font:12px/1.5 Microsoft YaHei；}
 
 ##### 5.3优先级
 
+![image-20250127232354483](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250127232354483.png)
+
+继承的权重是0，如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0。
+
+权重叠加：如果是复合选择器，则会有权重叠加，需要计算权重。
+
+**！important>style="">ID选择器>类选择器，伪类选择器>元素选择器**
+

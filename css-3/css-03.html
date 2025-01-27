@@ -7,17 +7,23 @@
     <title>优先级</title>
     <style>
         div {
-            color: pink;
+            color: pink !important;
         }
 
         .test {
             color: red;
         }
+
+        #demo {
+            color: green;
+        }
+
+        /* !important >style="" >#demo >.test >div */
     </style>
 </head>
 
 <body>
-    <div class="test">世界突然变得好安静</div>
+    <div class="test" id="demo" style="color: purple;">世界突然变得好安静</div>
 </body>
 
 </html>
