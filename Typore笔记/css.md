@@ -826,5 +826,35 @@ body {font:12px/1.5 Microsoft YaHei；}
 
 **！important>style="">ID选择器>类选择器，伪类选择器>元素选择器**
 
+#### 6.css盒子模型
 
+页面布局要学习三大核心, 盒子模型, 浮动和定位. 学习好盒子模型能非常好的帮助我们布局页面.
+
+##### 6.1盒子模型组成
+
+CSS 盒子模型本质上是一个盒子，封装周围的HTML 元素，它包括：边框、外边距、内边距、和实际内容
+
+
+
+![image-20250128233808951](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250128233808951.png)
+
+border：边框
+
+content：内容
+
+padding：内边距 （边框与内容）
+
+margin：外边距 （边框与边框）
+
+##### 6.2边框
+
+```html
+border : border-width ||border-style ||border-color
+```
+
+![image-20250128235516541](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250128235516541.png)
+
+border-style:
+
+![image-20250128235416425](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250128235416425.png)
 
