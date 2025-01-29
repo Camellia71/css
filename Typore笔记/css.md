@@ -858,3 +858,29 @@ border-style:
 
 ![image-20250128235416425](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250128235416425.png)
 
+边框样式border-style 可以设置如下值：
+
+none：没有边框即忽略所有边框的宽度（默认值）
+
+solid：边框为单实线(最为常用的)
+
+dashed：边框为虚线
+
+dotted：边框为点线
+
+复合写法：
+
+```html
+border: 20px solid red;
+没有顺序
+```
+
+只写边框的一部分：
+
+```html
+border-top :20px solid red
+border-bottom :
+border-left :
+border-right :
+```
+
