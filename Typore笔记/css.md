@@ -884,3 +884,60 @@ border-left :
 border-right :
 ```
 
+##### 6.3表格的细线边框
+
+border-collapse 属性控制浏览器绘制表格边框的方式。它控制相邻单元格的边框。
+
+```html
+border-collapse :collapse
+```
+
+collapse是合并单元格的边框；
+
+##### 6.4边框会影响盒子的实际大小
+
+1.测量盒子大小的时候,不量边框.
+
+2.如果测量的时候包含了边框,则需要width/height 减去边框宽度
+
+##### 6.5内边框
+
+padding属性用于设置内边距，即边框与内容之间的距离。
+
+盒子大小会随之改变；如果盒子没有width属性，则不会撑开盒子（比如与浏览器页面大小一致）
+
+![image-20250130221625726](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250130221625726.png)
+
+![image-20250130222756486](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250130222756486.png)
+
+顺时针旋转，没有的就复刻对面的
+
+##### 6.6外边距
+
+margin属性用于设置外边距，即控制盒子和盒子之间的距离。
+
+![image-20250130233125046](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250130233125046.png)
+
+简写方式与padding完全一致
+
+外边距可以让块级盒子水平居中，但是必须满足两个条件：
+
+①盒子必须指定了宽度（width）。
+
+②盒子左右的外边距都设置为auto 。
+
+```html
+.header { width:960px; margin:0 auto;}
+```
+
+常见的写法，以下三种都可以：
+
+margin-left: auto;margin-right: auto;
+
+margin: auto;
+
+margin: 0 auto;
+
+注意：
+
+以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加text-align:center 即可。

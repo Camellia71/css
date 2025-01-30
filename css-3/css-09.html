@@ -4,19 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>边框会影响盒子的实际大小</title>
+    <title>外边距</title>
     <style>
         div {
             width: 200px;
             height: 200px;
-            background-color: red;
-            border: 10px solid pink;
+            background-color: pink;
+        }
+
+        /* .one {
+            margin-bottom: 20px;
+        } */
+        .two {
+            /* margin-top: 20px; */
+            margin: 20px;
         }
     </style>
 </head>
 
 <body>
-    <div></div>
+    <div class="one">1</div>
+    <div class="two">2</div>
 </body>
 
 </html>
