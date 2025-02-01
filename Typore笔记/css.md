@@ -985,6 +985,22 @@ margin:0;
 
 注意：行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就可以了
 
+##### 6.9圆角边框（css3新增）
+
+border-radius 属性用于设置元素的外边框圆角。
+
+```html
+border-radius:length;
+```
+
+参数值可以为数值或百分比的形式
+
+如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一半即可，或者直接写为50%
+
+该属性是一个简写属性，可以跟四个值，分别代表左上角、右上角、右下角、左下角
+
+分开写：border-top-left-radius、border-top-right-radius、border-bottom-right-radius 和border-bottom-left-radius
+
 #### 7.ps基本操作
 
 因为网页美工大部分效果图都是利用PS（Photoshop）来做的，所以以后我们大部分切图工作都是在PS里面完成。
