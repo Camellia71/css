@@ -1131,3 +1131,24 @@ float属性用于创建浮动框，将其移动到一边，直到左边缘或右
 
 ![image-20250204004611282](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250204004611282.png)
 
+#### 2.常见网页布局
+
+##### 2.1常见布局
+
+![image-20250204235712655](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250204235712655.png)
+
+![image-20250204235731677](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250204235731677.png)
+
+##### 2.2注意点
+
+--浮动和标准流的父盒子搭配。
+
+先用标准流的父元素排列上下位置, 之后内部子元素采取浮动排列左右位置
+
+--一个元素浮动了，理论上其余的兄弟元素也要浮动。
+
+一个盒子里面有多个子盒子，如果其中一个盒子浮动了，那么其他兄弟也应该浮动，以防止引起问题。浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流.
+
+#### 3.清除浮动
+
+##### 3.1
