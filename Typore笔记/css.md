@@ -1151,4 +1151,79 @@ float属性用于创建浮动框，将其移动到一边，直到左边缘或右
 
 #### 3.清除浮动
 
-##### 3.1
+##### 3.1清除浮动本质
+
+![image-20250205230234623](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250205230234623.png)
+
+-清除浮动的本质是清除浮动元素造成的影响
+
+-如果父盒子本身有高度，则不需要清除浮动
+
+-清除浮动之后，父级就会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流了
+
+##### 3.2清除浮动
+
+```html
+选择器 {clear: 属性值; }
+```
+
+![image-20250205164149859](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250205164149859.png)
+
+我们实际工作中，几乎只用clear: both;
+
+清除浮动的策略是: **闭合浮动**.
+
+##### 3.3清除浮动方法
+
+1.额外标签法也称为隔墙法，是W3C推荐的做法。
+
+额外标签法会在浮动元素末尾添加一个空的标签。例如<div style="clear:both"></div>，或者其他标签（如 br/ 等）。
+
+注意：要求这个新的空标签必须是**块级**元素。
+
+2.父级添加overflow属性
+
+可以给父级添加overflow属性，将其属性值设置为hidden、auto或scroll。
+
+3.父级添加after伪元素
+
+:after 方式是额外标签法的升级版。也是给父元素添加
+
+```html
+.clearfix:after
+{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+	/* IE6、7专有 */
+	*zoom: 1;
+}
+```
+
+4.父级添加双伪元素
+
+```html
+.clearfix:before,.clearfix:after
+{
+	content:"";
+	display:table;
+}
+.clearfix:after
+{
+	clear:both;
+}
+.clearfix
+{
+	*zoom:1;
+}
+```
+
+## 5.css-5
+
+#### 1.PS切图
+
+##### 1.1
