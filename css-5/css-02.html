@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>绝对定位</title>
     <style>
+        .grandfather {
+            width: 900px;
+            height: 900px;
+            background-color: antiquewhite;
+            position: absolute;
+        }
+
         .father {
             width: 500px;
             height: 500px;
             background-color: skyblue;
-            position: relative;
+            /* position: relative; */
         }
 
         .son {
@@ -28,8 +35,10 @@
 </head>
 
 <body>
-    <div class="father">
-        <div class="son"></div>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son"></div>
+        </div>
     </div>
 </body>
 
