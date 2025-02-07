@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例-1：淘宝焦点图</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 350px;
+            background-color: antiquewhite;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .box img {
+            width: 600px;
+            height: 350px;
+        }
+
+        .left {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            left: 0;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .right {
+            position: absolute;
+            top: 160px;
+            right: 0;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 15px;
+            background: rgba(255, 255, 255, .3);
+            border-radius: 10px;
+        }
+
+        .bottom li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #fff;
+            margin: 3px;
+        }
+
+        .bottom .select {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="taobao.png" alt="1">
+        <a href="#" class="left">&lt;</a>
+        <a href="#" class="right">></a>
+        <ul class="bottom">
+            <li class="select"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
