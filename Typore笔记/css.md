@@ -1580,5 +1580,76 @@ overflow属性指定了如果内容溢出一个元素的框（超过其指定高
 
 6.使用精灵图的时候需要精确测量，每个小背景图片的大小和位置。
 
+#### 2.字体图标
 
+##### 2.1字体图标的产生
+
+字体图标使用场景： 主要用于显示网页中通用、常用的一些小图标。
+
+此时，有一种技术的出现很好的解决了以上问题，就是字体图标iconfont。
+
+字体图标可以为前端工程师提供一种方便高效的图标使用方式，展示的是图标，本质属于字体。
+
+##### 2.2字体图标的优点
+
+轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染出来，减少了服务器请求
+
+灵活性：本质其实是文字，可以很随意的改变颜色、产生阴影、透明效果、旋转等
+
+兼容性：几乎支持所有的浏览器，请放心使用
+
+注意：字体图标不能替代精灵技术，只是对工作中图标部分技术的提升和优化。
+
+总结：
+
+1.如果遇到一些结构和样式比较简单的小图标，就用字体图标。
+
+![image-20250209210003788](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209210003788.png)
+
+2.如果遇到一些结构和样式复杂一点的小图片，就用精灵图。
+
+##### 2.3字体图标的下载
+
+—icomoon字库[http://icomoon.io](http://icomoon.io)推荐指数★★★★★IcoMoon成立于2011年，推出了第一个自定义图标字体生成器，它允许用户选择所需要的图标，使它们成一字型。该字库内容种类繁多，非常全面，唯一的遗憾是国外服务器，打开网速较慢。
+
+—阿里iconfont字库http://www.iconfont.cn/推荐指数★★★★★这个是阿里妈妈M2UX的一个iconfont字体图标字库，包含了淘宝图标库和阿里妈妈图标库。可以使用AI制作图标上传生成。
+
+##### 2.4字体图标的引入
+
+*下载完毕之后，注意原先的文件不要删，后面会用。*
+
+1. 把下载包里面的fonts文件夹放入页面根目录下![image-20250209213047756](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209213047756.png)
+
+2.在CSS 样式中全局声明字体：简单理解把这些字体文件通过css引入到我们页面中。一定注意字体文件路径的问题。
+
+```html
+@font-face {
+        font-family: 'icomoon';
+        src:
+        url('fonts/icomoon.eot?7kkyc2');
+        src:url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+        url('fonts/icomoon.woff?7kkyc2') format('woff'),
+        url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+
+```
+
+3. html 标签内添加小图标。
+
+   ![image-20250209213219662](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209213219662.png)
+
+4.给标签定义字体。
+
+```html
+span {
+	font-family: "icomoon";
+}
+```
+
+![image-20250209213314474](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209213314474.png)
+
+##### 2.5字体图标的追加
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东三角</title>
+    <style>
+        .box1 {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .top {
+            position: absolute;
+            right: 15px;
+            top: -40px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 20px solid transparent;
+            border-bottom-color: pink;
+            margin: 0 auto;
+        }
+
+        .box2 {
+            position: relative;
+            width: 350px;
+            height: 150px;
+            background-color: skyblue;
+            max-resolution: 100px auto;
+        }
+
+        .right {
+            position: absolute;
+            top: 10px;
+            right: -20px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 10px solid transparent;
+            border-left-color: skyblue;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box1">
+        <span class="top"></span>
+    </div>
+    <div class="box2">
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
