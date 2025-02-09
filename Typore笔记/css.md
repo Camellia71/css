@@ -1653,3 +1653,22 @@ span {
 
 ##### 2.5字体图标的追加
 
+如果工作中，原来的字体图标不够用了，我们需要添加新的字体图标到原来的字体文件中。把压缩包里面的selection.json 从新上传，然后选中自己想要新的图标，从新下载压缩包，并替换原来的文件即可。
+
+![image-20250209224116569](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209224116569.png)
+
+#### 3.css三角
+
+网页中常见一些三角形，使用CSS 直接画出来就可以，不必做成图片或者字体图标。
+
+```html
+div {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 50px solid transparent;
+    border-left-color: pink;
+}
+```
+
