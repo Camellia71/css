@@ -1672,3 +1672,150 @@ div {
 }
 ```
 
+#### 4.css用户界面样式
+
+##### 4.1鼠标样式cursor
+
+```html
+li {cursor: pointer; }
+```
+
+设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。
+
+![image-20250209233340154](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209233340154.png)
+
+##### 4.2轮廓线outline
+
+给表单添加outline: 0;或者 outline: none; 样式之后，就可以去掉默认的蓝色边框。
+
+```html
+input {outline: none; }
+```
+
+##### 4.3防止拖拽文本域resize
+
+实际开发中，我们文本域右下角是不可以拖拽的。
+
+```html
+textarea{ resize: none;}
+```
+
+#### 5.vertical-align 属性应用
+
+CSS 的vertical-align 属性使用场景：经常用于设置图片或者表单(行内块元素）和文字垂直对齐。
+
+官方解释：用于设置一个元素的垂直对齐方式，但是它只针对于行内元素或者行内块元素有效。
+
+```html
+vertical-align : baseline | top | middle | bottom
+```
+
+![image-20250209234727357](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209234727357.png)
+
+![image-20250209234755205](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250209234755205.png)
+
+##### 5.1图片、表单和文字对齐
+
+图片、表单都属于行内块元素，默认的vertical-align 是基线对齐。
+
+此时可以给图片、表单这些行内块元素的vertical-align属性设置为middle就可以让文字和图片垂直居中对齐了。
+
+##### 5.2解决图片底部默认空白缝隙问题
+
+bug：图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。
+
+主要解决方法有两种：
+
+1.给图片添加vertical-align:middle | top| bottom等。（提倡使用的）
+
+2.把图片转换为块级元素 display: block;
+
+#### 6.溢出的文字省略号显示
+
+##### 6.1单行文本溢出显示省略号
+
+```html
+/*1.先强制一行内显示文本*/
+white-space: nowrap;
+（默认normal自动换行）
+/*2.超出的部分隐藏*/
+overflow: hidden;
+/*3.文字用省略号替代超出的部分*/
+text-overflow: ellipsis;
+```
+
+##### 6.2多行文本溢出显示省略号
+
+多行文本溢出显示省略号，有较大兼容性问题，适合于webKit浏览器或移动端（移动端大部分是webkit内核）
+
+```html
+overflow:hidden;
+text-overflow:ellipsis;
+/*弹性伸缩盒子模型显示*/
+display:-webkit-box;
+/*限制在一个块元素显示的文本的行数*/
+-webkit-line-clamp:2;
+/*设置或检索伸缩盒对象的子元素的排列方式*/
+-webkit-box-orient:vertical;
+```
+
+*更推荐让后台人员来做这个效果，因为后台人员可以设置显示多少个字，操作更简单。*
+
+#### 7.常见布局技巧
+
+##### 7.1margin负值运用
+
+![image-20250210181005571](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250210181005571.png)
+
+1.让每个盒子margin往左侧移动-1px正好压住相邻盒子边框
+
+2.鼠标经过某个盒子的时候，提高当前盒子的层级即可（如果没有定位，则加相对定位（保留位置），如果有定位，则加z-index）
+
+##### 7.2文字围绕浮动元素
+
+巧妙运用浮动元素不会压住文字的特性
+
+##### 7.3行内块巧妙运用
+
+![image-20250210181149160](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250210181149160.png)
+
+页码在页面中间显示:
+
+1.把这些链接盒子转换为行内块，之后给父级指定text-align:center;
+
+2.利用行内块元素中间有缝隙，并且给父级添加text-align:center;行内块元素会水平会居中
+
+##### 7.4CSS 三角强化
+
+小三角用<i> </i>
+
+![image-20250210192118701](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20250210192118701.png)
+
+```html
+width: 0;
+height: 0;
+border-color: transparent red transparent transparent;
+border-style: solid;
+border-width: 22px 8px 0 0;
+```
+
+#### 8.CSS 初始化
+
+简单理解：CSS初始化是指重设浏览器的样式。(也称为CSS reset）
+
+每个网页都必须首先进行CSS初始化。
+
+这里我们以京东CSS初始化代码为例。
+
+Unicode编码字体：
+
+把中文字体的名称用相应的Unicode编码来代替，这样就可以有效的避免浏览器解释CSS代码时候出现乱码的问题。
+
+比如：
+
+黑体\9ED1\4F53
+
+宋体\5B8B\4F53
+
+微软雅黑\5FAE\8F6F\96C5\9ED1
+
