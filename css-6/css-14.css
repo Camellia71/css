@@ -64,6 +64,11 @@ body {
     height: 0;
 }
 
-.clearfix {
+/* .clearfix {
     *zoom: 1;
-}
+} */
+ .clearfix::after {
+     content: "";
+     display: table;
+     clear: both;
+ }
